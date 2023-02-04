@@ -1,0 +1,11 @@
+.h {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.formd {
+  width: 500px;
+  margin-left: 0px;
+}
+.footerm {
+  box-shadow: 0 -0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
+}
