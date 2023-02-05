@@ -6,20 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        
+        $(selector).submit(function (e) { 
+            e.preventDefault();
+            
+        });
     </script>
 </head>
 <body>
-    <input type="checkbox" name="" id=""><label>Rick</label><br>
-    <input type="checkbox" name="" id=""><label>Astley</label><br>
-    <select name="" id="" style="padding: 2px;">
-        <option disabled selected hidden>Select...</option>
-        <option value="">Never</option>
-        <option value="">Gonna</option>
-        <option value="">Give</option>
-        <option value="">You</option>
-        <option value="">Up</option>
-    </select>
-    <button type="button" class="btn btn-primary">Primary</button>
+    <form>
+        <input type="checkbox" name="" id=""><label>Rick</label><br>
+        <input type="checkbox" name="" id=""><label>Astley</label><br>
+        <select name="" id="" style="padding: 2px;">
+            <option disabled selected hidden>Select...</option>
+            <option value="">Never</option>
+            <option value="">Gonna</option>
+            <option value="">Give</option>
+            <option value="">You</option>
+            <option value="">Up</option>
+        </select>
+        <button type="button" class="btn btn-primary">Primary</button>
+    </form>
+    <div class="result"></div>
 </body>
 </html>
