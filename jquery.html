@@ -7,31 +7,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="css\bootstrap.min.css">
     <script src="js\jquery-3.6.3.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("form").submit(function(event){ 
-                var forminput = $("form").serializeArray()
-                $.each(forminput, function (i, forminput) { 
-                     $(".result").append(forminput.value + "");
-                });
-            });
-        });
-    </script>
 </head>
 <body>
+    <p>abc</p>
     <form>
-        <input type="checkbox" name="" id="chk1" value="Rick"><label for="chk1">Rick</label><br>
-        <input type="checkbox" name="" id="chk2" value="Astley"><label for="chk2">Astley</label><br>
-        <select name="" id="" style="padding: 2px;">
+        <input type="checkbox" name="check" id="chk1" value="Rick"><label for="chk1">Rick</label><br>
+        <input type="checkbox" name="check" id="chk2" value="Astley"><label for="chk2">Astley</label><br>
+        <select name="select" id="" style="padding: 2px;">
             <option disabled selected hidden>Select...</option>
-            <option value="Never">Never</option>
-            <option value="Gonna">Gonna</option>
-            <option value="Give">Give</option>
-            <option value="You">You</option>
-            <option value="Up">Up</option>
+            <option>Never</option>
+            <option>Gonna</option>
+            <option>Give</option>
+            <option>You</option>
+            <option>Up</option>
         </select>
-        <button type="submit" class="btn btn-primary">Primary</button>
-    </form><br>
-    <div class="result"></div>
+    </form>
+    <button type="button" class="btn btn-primary">Primary</button><br>
+    <div id="result">result: </div>
+    <script>
+        $(':button').click(function() {
+            // Get all the forms elements and their values in one step
+            var fields = $( ":input" ).serializeArray();
+        });
+        function showValues() {
+            $( "#result" ).empty();
+            jQuery.each( fields, function( i, field ) {
+                  $( "#result" ).append( field.value + " " );
+                });
+        }
+      
+        $( ":checkbox, :radio" ).click( showValues );
+        $( "select" ).change( showValues );
+        showValues();
+    </script>
 </body>
 </html>
