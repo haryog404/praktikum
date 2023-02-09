@@ -12,14 +12,13 @@
     <p>abc</p>
     <form>
         <select name="select" id="" style="padding: 2px;">
-            <option disabled selected hidden>Select...</option>
             <option>Rick</option>
             <option>Astley</option>
-        </select>
+        </select><br>
         <select name="select" id="" style="padding: 2px;">
-            <option>Rick</option>
             <option>Astley</option>
-        </select>
+            <option>Rick</option>
+        </select><br>
         <input type="checkbox" name="check" id="chk1" value="Never"><label for="chk1">Never</label><br>
         <input type="checkbox" name="check" id="chk2" value="Gonna"><label for="chk2">Gonna</label><br>
         <input type="checkbox" name="check" id="chk1" value="Give"><label for="chk1">Give</label><br>
@@ -27,16 +26,18 @@
         <input type="checkbox" name="check" id="chk2" value="Up"><label for="chk2">Up</label><br>
     </form>
     <button type="button" class="btn btn-primary">Primary</button><br>
-    <div id="result">result: </div>
+    <div id="result">results: </div>
     <script>
         $(document).ready(function () {
         $(':button').click(function() {
-            // Get all the forms elements and their values in one step
             var fields = $( ":input" ).serializeArray();
-            $( "#result" ).empty();
+            $( "#result" ).html("results: ");
             jQuery.each( fields, function( i, field ) {
                   $( "#result" ).append( field.value + " " );
                 });
+            setTimeout(function() {
+                window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+            }, 1500);
         });
         });
     </script>
