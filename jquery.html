@@ -25,20 +25,16 @@
     <button type="button" class="btn btn-primary">Primary</button><br>
     <div id="result">result: </div>
     <script>
+        $(document).ready(function () {
         $(':button').click(function() {
             // Get all the forms elements and their values in one step
             var fields = $( ":input" ).serializeArray();
-        });
-        function showValues() {
             $( "#result" ).empty();
             jQuery.each( fields, function( i, field ) {
                   $( "#result" ).append( field.value + " " );
                 });
-        }
-      
-        $( ":checkbox, :radio" ).click( showValues );
-        $( "select" ).change( showValues );
-        showValues();
+        });
+        });
     </script>
 </body>
 </html>
