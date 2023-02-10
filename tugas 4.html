@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js\jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+</head>
+<body>
+    <form action="">
+        <label for="#txtarea">Text</label>
+        <input type="text" name="" id="textarea">
+        <label for="#warna">Color:</label>
+        <select name="" id="warna">
+            <option value="red">Merah</option>
+            <option value="green">Hijau</option>
+            <option value="blue">Biru</option>
+        </select>
+        <label for="#ukuran">Size:</label>
+        <select name="" id="ukuran">
+            <option value="18">18</option>
+            <option value="24">24</option>
+            <option value="36">36</option>
+        </select>
+        <input type="button" value="Cetak">
+    </form>
+    <h3 class="cetakan"></h3>
+    <script>
+        $(document).ready(function () {
+        $("input[type='button']").click(function () {
+          var inputText = $("input[type='text']").val();
+          var color = $("#warna").val();
+          var size = $("#ukuran").val();
+          $(".cetakan").html(
+            "<p style='color: " +
+              color +
+              "; font-size: " +
+              size +
+              "px'>" +
+              inputText +
+              "</p>"
+                );
+            });
+        });
+    </script>
+</body>
+</html>

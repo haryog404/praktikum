@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jumlah siswa</title>
+    <script src="js\jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+</head>
+<body>
+    <h2 id="senin">Senin : </h2>
+    <h2 id="selasa">Selasa : </h2>
+    <h2 id="rabu">Rabu : </h2>
+    <h2 id="kamis">Kamis : </h2>
+    <h2 id="jumat">Jumat : </h2>
+    <script>
+        $(document).ready(function () {
+            var sisenin = prompt("masukkan jumlah siswa masuk","")
+            for (let i = 0; i < sisenin; i++) {
+                $("#senin").append("*");
+            }
+            var siselasa = prompt("masukkan jumlah siswa masuk","")
+            for (let i = 0; i < siselasa; i++) {
+                $("#selasa").append("*");
+            }
+            var sirabu = prompt("masukkan jumlah siswa masuk","")
+            for (let i = 0; i < sirabu; i++) {
+                $("#rabu").append("*");
+            }
+            var sikamis = prompt("masukkan jumlah siswa masuk","")
+            for (let i = 0; i < sikamis; i++) {
+                $("#kamis").append("*");
+            }
+            var sijumat = prompt("masukkan jumlah siswa masuk","")
+            for (let i = 0; i < sijumat; i++) {
+                $("#jumat").append("*");
+            }
+        });
+    </script>
+</body>
+</html>

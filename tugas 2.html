@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jam</title>
+    <script src="js\jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+</head>
+<body>
+    <h1 class="text-primary"></h1>
+    <script>
+        $(document).ready(function () {
+            var alerta = prompt("Masukkan jam sekarang","")
+            if ((alerta >=6) && (alerta <=10)) {
+                $("h1").html("Selamat Pagi");
+            }
+            else if ((alerta >=11) && (alerta <=14)) {
+                $("h1").html("Selamat Siang");
+            }
+            else if ((alerta >=15) && (alerta <=17)) {
+                $("h1").html("Selamat Sore");
+            }
+            else if ((alerta >=18) && (alerta <=24)) {
+                $("h1").html("Selamat Malam");
+            }
+            else if ((alerta >=1) && (alerta <=5)) {
+                $("h1").html("Selamat Tidur");
+            }
+            else {
+                $("h1").html("Masukan tidak valid");
+            }
+        });
+    </script>
+</body>
+</html>
