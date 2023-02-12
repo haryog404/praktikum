@@ -2,7 +2,7 @@
 session_start();
 
 if(isset($_SESSION["username"])) {
-    header("Location: waaaa.php");
+    header("Location: 6.php");
 }
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ if(isset($_SESSION["username"])) {
 
         if($username == 'user' && $password == 'user123') {
             $_SESSION["username"] = $username;
-            header("Location: waaaa.php");
+            header("Location: 6.php");
         } else {
             echo "Data yang dimasukkan salah";
         }
